@@ -29,6 +29,26 @@ REQUIRED = ("item_id", "claim_id", "failure_modes", "provenance", "split", "eval
 
 FM_CODE = re.compile(r"FM-\d{2}")
 
+# M1 coverage tags: a case exercises a risk even when its control trace passes.
+# Evidence and the distinction between coverage and observed failures are in
+# docs/failure_taxonomy.md. New claims require a fresh taxonomy review.
+FAILURE_MODES_V1 = {
+    "C-001": ["FM-01", "FM-04", "FM-07"],
+    "C-002": ["FM-01", "FM-03", "FM-04"],
+    "C-003": ["FM-01", "FM-04"],
+    "C-004": ["FM-01"],
+    "C-005": ["FM-01"],
+    "C-006": ["FM-01", "FM-06"],
+    "C-007": ["FM-01", "FM-02"],
+    "C-008": ["FM-01", "FM-04", "FM-08"],
+    "C-009": ["FM-01"],
+    "C-010": ["FM-01", "FM-07"],
+    "C-011": ["FM-01", "FM-07"],
+    "C-012": ["FM-01", "FM-07"],
+    "C-013": ["FM-01", "FM-02", "FM-05"],
+    "C-014": ["FM-01", "FM-04", "FM-05", "FM-08"],
+}
+
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
@@ -46,11 +66,13 @@ def build(source: Path = SOURCE) -> tuple[int, int]:
         items.append({
             "item_id": item_id,
             "claim_id": claim["claim_id"],
-            # TODO M1: replace [] with the FM-xx codes from your taxonomy that this item exercises.
-            "failure_modes": [],
+            "failure_modes": list(FAILURE_MODES_V1.get(claim["claim_id"], [])),
             "provenance": {"source": "lab8_public", "matrix_id": claim.get("matrix_id"),
-                           "from_trace": None, "generator": None,
-                           "label_by": "lab8_matrix", "checked_by": None},
+                           "from_trace": f"docs/evidence/m1_traces.json#fixed:{claim['claim_id']}@11"
+                           if claim["claim_id"] in FAILURE_MODES_V1 else None,
+                           "generator": "lab9.evalset.build",
+                           "label_by": "lab8_matrix", "checked_by": "M1_public_trace_review"
+                           if claim["claim_id"] in FAILURE_MODES_V1 else None},
             "split": "regression",
             "eval_set_version": VERSION,
         })
