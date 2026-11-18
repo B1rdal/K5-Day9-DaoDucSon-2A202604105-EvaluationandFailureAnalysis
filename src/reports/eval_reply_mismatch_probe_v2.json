@@ -1,9 +1,9 @@
 {
-  "run_id": "E-reply_mismatch_probe-20261118-f121",
+  "run_id": "E-reply_mismatch_probe-20261118-f40c",
   "shape": "reply_mismatch_probe",
   "manifest": {
     "eval_set": "data/eval/eval_set_v2.jsonl",
-    "eval_set_sha": "f121e604674c",
+    "eval_set_sha": "f40c16727b2a",
     "items": 28,
     "seeds": [
       11,

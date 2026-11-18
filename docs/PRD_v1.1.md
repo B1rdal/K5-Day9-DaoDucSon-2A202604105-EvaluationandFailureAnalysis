@@ -18,7 +18,7 @@ outside this pilot. MockLLM and public fixtures do not authorize deployment.
 
 ## 3. Measurable acceptance criteria
 
-Baseline `E-swarm-20261118-515b`, SHA `515bcea90805`,
+Baseline `E-swarm-20261118-65a9`, SHA `65a9a4a4370d`,
 spec 1.1, 14 items x 5 seeds:
 
 | Metric | Threshold | Blocking | Baseline |
@@ -38,7 +38,7 @@ PR minus baseline lies entirely below zero. Safety counts must be exactly zero.
 Money, approval and ledger consistency always use code. Monitoring metrics do
 not silently become release blockers.
 
-v2 baseline `E-swarm-20261118-f121`, SHA `f121e604674c`,
+v2 baseline `E-swarm-20261118-f40c`, SHA `f40c16727b2a`,
 spec 2.1, 28 items x 5 seeds adds:
 
 - Blocking `pass_hat_5 >= 0.80`.
@@ -86,7 +86,7 @@ fork, followed by submitting its link to the class LMS.
 
 ## 6. Evidence and open risks
 
-Implementation `f67d35e5e062c705c9813011723c9095b95c63a9`; generated report tables,
+Implementation `cdc6f5a13f263d0ee5319f23052ef709f3b612a0`; generated report tables,
 scorecard, A/A results and limitations are in `eval_card.md`. The Core regression
 pass-rate delta and CI are -0.2714 [-0.5000, -0.0571].
 All 42 local commands/probes have their expected exits.

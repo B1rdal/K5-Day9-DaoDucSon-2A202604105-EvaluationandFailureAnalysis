@@ -1,6 +1,6 @@
 # Eval card — LogiX-VN refund agent
 
-Evaluation date: 2026-11-18. Implementation commit: `f67d35e5e062c705c9813011723c9095b95c63a9`.
+Evaluation date: 2026-11-18. Implementation commit: `cdc6f5a13f263d0ee5319f23052ef709f3b612a0`.
 Reports are generated, not edited. Full command output is in
 [final_checks.txt](evidence/final_checks.txt); machine-readable command outcomes
 are in `src/reports/submission_checks.json` (42 checks/probes).
@@ -10,13 +10,13 @@ are in `src/reports/submission_checks.json` (42 checks/probes).
 - Original Day 8 source remains unchanged; agent shape is the provided `swarm`.
 - Python 3.13.18; pydantic-evals 2.68.0; MockLLM; judge replay.
 - v1: 14 items x 5 seeds, public Day 8 matrix,
-  separate `labels_v1.json`, SHA `515bcea90805`.
+  separate `labels_v1.json`, SHA `65a9a4a4370d`.
 - v2: 28 items x 5 seeds (14 public + 14 adversarial),
-  separate `labels_v2.json`, SHA `f121e604674c`.
+  separate `labels_v2.json`, SHA `f40c16727b2a`.
 - Seeds: `[11, 22, 33, 44, 55]`. Specs: v1 `1.1`,
   v2 `2.1`. Bootstrap: paired item means over seeds,
   percentile, 1,000 resamples, RNG 2027, 95% confidence.
-- Baseline run IDs: `E-swarm-20261118-515b` and `E-swarm-20261118-f121`.
+- Baseline run IDs: `E-swarm-20261118-65a9` and `E-swarm-20261118-f40c`.
 - Rerun from `src/`: `python -m scripts.verify_lab9`, then
   `python -m scripts.build_v2_evidence` and `python -m scripts.build_submission_docs`.
 
@@ -34,8 +34,8 @@ are in `src/reports/submission_checks.json` (42 checks/probes).
 | reply_amount_correct | `{"min": 1.0, "no_significant_drop": true}` | yes | 1.0 |
 | denial_honored | `{"min": 1.0}` | yes | 1.0 |
 
-Reports: `baseline_v1.json`, `eval_fixed.json` (E-fixed-20261118-515b),
-`eval_seeded_regression.json` (E-seeded_regression-20261118-515b).
+Reports: `baseline_v1.json`, `eval_fixed.json` (E-fixed-20261118-65a9),
+`eval_seeded_regression.json` (E-seeded_regression-20261118-65a9).
 
 | Metric | Baseline swarm | fixed | seeded_regression |
 |---|---:|---:|---:|
@@ -91,11 +91,11 @@ eight observed faults and the v2 principal-scope boundary.
 
 | Shape | Run ID | pass_rate | pass_hat_5 | Gate | Blocking checks |
 |---|---|---:|---:|---|---|
-| fixed | E-fixed-20261118-f121 | 1.0 | 1.0 | MERGE | none |
-| honest_refactor | E-honest_refactor-20261118-f121 | 1.0 | 1.0 | MERGE | none |
-| seeded_regression | E-seeded_regression-20261118-f121 | 0.6429 | 0.6429 | BLOCK | refund_amount_correct, pass_rate, pass_hat_5, reply_amount_correct, denial_honored, slice:denial/pass_rate, slice:money_movement/pass_rate, slice:adversarial/pass_rate |
-| slice_regression | E-slice_regression-20261118-f121 | 0.9357 | 0.8929 | BLOCK | slice:money_movement/pass_rate |
-| flaky_regression | E-flaky_regression-20261118-f121 | 0.9143 | 0.5714 | BLOCK | pass_rate, pass_hat_5, slice:money_movement/pass_rate |
+| fixed | E-fixed-20261118-f40c | 1.0 | 1.0 | MERGE | none |
+| honest_refactor | E-honest_refactor-20261118-f40c | 1.0 | 1.0 | MERGE | none |
+| seeded_regression | E-seeded_regression-20261118-f40c | 0.6429 | 0.6429 | BLOCK | refund_amount_correct, pass_rate, pass_hat_5, reply_amount_correct, denial_honored, slice:denial/pass_rate, slice:money_movement/pass_rate, slice:adversarial/pass_rate |
+| slice_regression | E-slice_regression-20261118-f40c | 0.9357 | 0.8929 | BLOCK | slice:money_movement/pass_rate |
+| flaky_regression | E-flaky_regression-20261118-f40c | 0.9143 | 0.5714 | BLOCK | pass_rate, pass_hat_5, slice:money_movement/pass_rate |
 
 | Slice | Items | Baseline pass rate | slice_regression pass rate | Delta and 95% CI |
 |---|---:|---:|---:|---|

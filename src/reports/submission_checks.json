@@ -1,5 +1,5 @@
 {
-  "implementation_commit": "f67d35e5e062c705c9813011723c9095b95c63a9",
+  "implementation_commit": "cdc6f5a13f263d0ee5319f23052ef709f3b612a0",
   "commands": [
     {
       "command": "python -m lab9.smoke",
