@@ -1,6 +1,7 @@
 """Generate the evaluation card, PRD and PR description from verified reports."""
 
 import json
+import re
 from pathlib import Path
 
 from lab9 import gate, stats
@@ -23,6 +24,8 @@ def main():
     logs = (docs / "evidence/final_checks.txt").read_text(encoding="utf-8")
     logs = "\n".join(line.rstrip() for line in logs.splitlines()) + "\n"
     (docs / "evidence/final_checks.txt").write_text(logs, encoding="utf-8")
+    counts = re.findall(r"(\d+) passed", logs)
+    lab_test_count, existing_test_count = counts[:2]
 
     def output(fragment):
         for block in logs.split("\n$ "):
@@ -326,7 +329,7 @@ slice and reliability gates, report integrity, and same-version policy ratchets.
 The gate accepts legitimate refactors and blocks both broad and localized
 refund regressions. Original Day 8 code, supplied variants and traps are unchanged.
 
-Validation: 78 Lab 9 tests and 57 existing tests passed; v1/v2 data checks clean;
+Validation: {lab_test_count} Lab 9 tests and {existing_test_count} existing tests passed; v1/v2 data checks clean;
 M3 detection 100%, false alarms 0%; all {len(checks['commands'])} command/probe
 statuses match expectations. Reports and complete logs are committed. Full
 numbers, run IDs and sample-size limits are in `docs/eval_card.md`.

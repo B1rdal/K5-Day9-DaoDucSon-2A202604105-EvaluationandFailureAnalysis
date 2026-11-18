@@ -1,0 +1,2 @@
+# Eval fingerprints must use identical bytes on Windows and Linux.
+src/data/eval/*.jsonl text eol=lf
