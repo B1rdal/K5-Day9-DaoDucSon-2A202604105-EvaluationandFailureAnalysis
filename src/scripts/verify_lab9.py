@@ -37,6 +37,7 @@ def main():
         evidence.write_text("\n".join(logs), encoding="utf-8")
 
     def record(command, status, expected, output):
+        output = "\n".join(line.rstrip() for line in output.splitlines())
         records.append({"command": command, "exit_code": status, "expected_exit": expected})
         logs.append(f"$ {command}\n{output.rstrip()}\n[exit {status}; expected {expected}]\n")
         print(logs[-1], flush=True)

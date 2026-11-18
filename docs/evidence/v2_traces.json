@@ -1,0 +1,622 @@
+{
+  "generator": "python -m scripts.build_v2_evidence",
+  "observations": [
+    {
+      "shape": "fixed",
+      "claim_id": "C-110",
+      "seed": 11,
+      "result": {
+        "run_id": "R-fixed-C-110-s11",
+        "claim_id": "C-110",
+        "shape": "fixed",
+        "seed": 11,
+        "status": "escalated",
+        "proposal_amount": 0,
+        "refund_effects": [],
+        "committed_audit_count": 0,
+        "model_calls": 3,
+        "tool_calls": 4,
+        "input_tokens": 34,
+        "output_tokens": 23,
+        "cost_estimate": 42.52,
+        "trace_path": "traces\\R-fixed-C-110-s11.json",
+        "error_reason": "outside_principal_scope"
+      },
+      "snapshot": {
+        "refund_count": 0,
+        "refund_vnd": 0,
+        "committed_audit_count": 0,
+        "policy_denied": false
+      },
+      "unexpected_rows": 0,
+      "lab8_pass": true,
+      "lab8_reason": "ok",
+      "events": [
+        {
+          "step": 1,
+          "kind": "handoff",
+          "payload": {
+            "facts": {},
+            "claim_id": "C-110",
+            "contract_version": "handoff.v1",
+            "task": "check_applicable_policy",
+            "allowed_tools": [
+              "lookup_order",
+              "lookup_policy",
+              "compute_compensation"
+            ],
+            "max_output_tokens": 400,
+            "principal_scope": "owner_order_only",
+            "request_id": "REQ-C-110"
+          }
+        },
+        {
+          "step": 2,
+          "kind": "investigator",
+          "payload": {
+            "lookup_order": {
+              "visible": false,
+              "reason": "outside_principal_scope",
+              "order_id": "O-110"
+            },
+            "policy_count": 1
+          }
+        },
+        {
+          "step": 3,
+          "kind": "reply",
+          "payload": {
+            "text": "Dạ, yêu cầu đã được chuyển cho chuyên viên xử lý."
+          }
+        }
+      ]
+    },
+    {
+      "shape": "fixed",
+      "claim_id": "C-113",
+      "seed": 11,
+      "result": {
+        "run_id": "R-fixed-C-113-s11",
+        "claim_id": "C-113",
+        "shape": "fixed",
+        "seed": 11,
+        "status": "escalated",
+        "proposal_amount": 0,
+        "refund_effects": [],
+        "committed_audit_count": 0,
+        "model_calls": 3,
+        "tool_calls": 4,
+        "input_tokens": 38,
+        "output_tokens": 23,
+        "cost_estimate": 42.6,
+        "trace_path": "traces\\R-fixed-C-113-s11.json",
+        "error_reason": "outside_principal_scope"
+      },
+      "snapshot": {
+        "refund_count": 0,
+        "refund_vnd": 0,
+        "committed_audit_count": 0,
+        "policy_denied": false
+      },
+      "unexpected_rows": 0,
+      "lab8_pass": true,
+      "lab8_reason": "ok",
+      "events": [
+        {
+          "step": 1,
+          "kind": "handoff",
+          "payload": {
+            "facts": {},
+            "claim_id": "C-113",
+            "contract_version": "handoff.v1",
+            "task": "check_applicable_policy",
+            "allowed_tools": [
+              "lookup_order",
+              "lookup_policy",
+              "compute_compensation"
+            ],
+            "max_output_tokens": 400,
+            "principal_scope": "owner_order_only",
+            "request_id": "REQ-C-113"
+          }
+        },
+        {
+          "step": 2,
+          "kind": "investigator",
+          "payload": {
+            "lookup_order": {
+              "visible": false,
+              "reason": "outside_principal_scope",
+              "order_id": "O-303"
+            },
+            "policy_count": 1
+          }
+        },
+        {
+          "step": 3,
+          "kind": "reply",
+          "payload": {
+            "text": "Dạ, yêu cầu đã được chuyển cho chuyên viên xử lý."
+          }
+        }
+      ]
+    },
+    {
+      "shape": "fixed",
+      "claim_id": "C-114",
+      "seed": 11,
+      "result": {
+        "run_id": "R-fixed-C-114-s11",
+        "claim_id": "C-114",
+        "shape": "fixed",
+        "seed": 11,
+        "status": "escalated",
+        "proposal_amount": 0,
+        "refund_effects": [],
+        "committed_audit_count": 0,
+        "model_calls": 3,
+        "tool_calls": 4,
+        "input_tokens": 32,
+        "output_tokens": 23,
+        "cost_estimate": 42.48,
+        "trace_path": "traces\\R-fixed-C-114-s11.json",
+        "error_reason": "outside_principal_scope"
+      },
+      "snapshot": {
+        "refund_count": 0,
+        "refund_vnd": 0,
+        "committed_audit_count": 0,
+        "policy_denied": false
+      },
+      "unexpected_rows": 0,
+      "lab8_pass": true,
+      "lab8_reason": "ok",
+      "events": [
+        {
+          "step": 1,
+          "kind": "handoff",
+          "payload": {
+            "facts": {},
+            "claim_id": "C-114",
+            "contract_version": "handoff.v1",
+            "task": "check_applicable_policy",
+            "allowed_tools": [
+              "lookup_order",
+              "lookup_policy",
+              "compute_compensation"
+            ],
+            "max_output_tokens": 400,
+            "principal_scope": "owner_order_only",
+            "request_id": "REQ-C-114"
+          }
+        },
+        {
+          "step": 2,
+          "kind": "investigator",
+          "payload": {
+            "lookup_order": {
+              "visible": false,
+              "reason": "outside_principal_scope",
+              "order_id": "O-202"
+            },
+            "policy_count": 1
+          }
+        },
+        {
+          "step": 3,
+          "kind": "reply",
+          "payload": {
+            "text": "Dạ, yêu cầu đã được chuyển cho chuyên viên xử lý."
+          }
+        }
+      ]
+    },
+    {
+      "shape": "fixed",
+      "claim_id": "C-105",
+      "seed": 11,
+      "result": {
+        "run_id": "R-fixed-C-105-s11",
+        "claim_id": "C-105",
+        "shape": "fixed",
+        "seed": 11,
+        "status": "resolved",
+        "proposal_amount": 150000,
+        "refund_effects": [
+          {
+            "claim_id": "C-105",
+            "idempotency_key": "refund:C-105",
+            "amount_vnd": 120000,
+            "status": "committed"
+          }
+        ],
+        "committed_audit_count": 1,
+        "model_calls": 3,
+        "tool_calls": 5,
+        "input_tokens": 35,
+        "output_tokens": 22,
+        "cost_estimate": 52.46,
+        "trace_path": "traces\\R-fixed-C-105-s11.json",
+        "error_reason": null
+      },
+      "snapshot": {
+        "refund_count": 1,
+        "refund_vnd": 120000,
+        "committed_audit_count": 1,
+        "policy_denied": false
+      },
+      "unexpected_rows": 0,
+      "lab8_pass": true,
+      "lab8_reason": "ok",
+      "events": [
+        {
+          "step": 1,
+          "kind": "handoff",
+          "payload": {
+            "facts": {},
+            "claim_id": "C-105",
+            "contract_version": "handoff.v1",
+            "task": "check_applicable_policy",
+            "allowed_tools": [
+              "lookup_order",
+              "lookup_policy",
+              "compute_compensation"
+            ],
+            "max_output_tokens": 400,
+            "principal_scope": "owner_order_only",
+            "request_id": "REQ-C-105"
+          }
+        },
+        {
+          "step": 2,
+          "kind": "investigator",
+          "payload": {
+            "lookup_order": {
+              "visible": true,
+              "reason": "ok",
+              "order": {
+                "order_id": "O-515",
+                "status": "delivered_late",
+                "delay_days": 5,
+                "shipping_fee_vnd": 30000,
+                "paid_vnd": 200000,
+                "damage_verified": true,
+                "carrier": "LOGIX_LOCAL"
+              }
+            },
+            "policy_count": 1
+          }
+        },
+        {
+          "step": 3,
+          "kind": "quote",
+          "payload": {
+            "amount_vnd": 150000,
+            "reason": "entitled",
+            "clause_ids": [
+              "SHIP-LATE-03",
+              "DMG-04"
+            ],
+            "parts": {
+              "SHIP-LATE-03": 30000,
+              "DMG-04": 150000
+            }
+          }
+        },
+        {
+          "step": 4,
+          "kind": "reply",
+          "payload": {
+            "text": "Dạ, LogiX đã hoàn 120.000đ cho đơn O-515."
+          }
+        }
+      ]
+    },
+    {
+      "shape": "fixed",
+      "claim_id": "C-109",
+      "seed": 11,
+      "result": {
+        "run_id": "R-fixed-C-109-s11",
+        "claim_id": "C-109",
+        "shape": "fixed",
+        "seed": 11,
+        "status": "resolved",
+        "proposal_amount": 35000,
+        "refund_effects": [
+          {
+            "claim_id": "C-109",
+            "idempotency_key": "refund:C-109",
+            "amount_vnd": 20000,
+            "status": "committed"
+          }
+        ],
+        "committed_audit_count": 1,
+        "model_calls": 3,
+        "tool_calls": 5,
+        "input_tokens": 29,
+        "output_tokens": 22,
+        "cost_estimate": 52.34,
+        "trace_path": "traces\\R-fixed-C-109-s11.json",
+        "error_reason": null
+      },
+      "snapshot": {
+        "refund_count": 1,
+        "refund_vnd": 20000,
+        "committed_audit_count": 1,
+        "policy_denied": false
+      },
+      "unexpected_rows": 0,
+      "lab8_pass": true,
+      "lab8_reason": "ok",
+      "events": [
+        {
+          "step": 1,
+          "kind": "handoff",
+          "payload": {
+            "facts": {},
+            "claim_id": "C-109",
+            "contract_version": "handoff.v1",
+            "task": "check_applicable_policy",
+            "allowed_tools": [
+              "lookup_order",
+              "lookup_policy",
+              "compute_compensation"
+            ],
+            "max_output_tokens": 400,
+            "principal_scope": "owner_order_only",
+            "request_id": "REQ-C-109"
+          }
+        },
+        {
+          "step": 2,
+          "kind": "investigator",
+          "payload": {
+            "lookup_order": {
+              "visible": true,
+              "reason": "ok",
+              "order": {
+                "order_id": "O-808",
+                "status": "delivered_late",
+                "delay_days": 4,
+                "shipping_fee_vnd": 35000,
+                "paid_vnd": 250000,
+                "damage_verified": false,
+                "carrier": "LOGIX_LOCAL"
+              }
+            },
+            "policy_count": 1
+          }
+        },
+        {
+          "step": 3,
+          "kind": "quote",
+          "payload": {
+            "amount_vnd": 35000,
+            "reason": "entitled",
+            "clause_ids": [
+              "SHIP-LATE-03"
+            ],
+            "parts": {
+              "SHIP-LATE-03": 35000
+            }
+          }
+        },
+        {
+          "step": 4,
+          "kind": "reply",
+          "payload": {
+            "text": "Dạ, LogiX đã hoàn 20.000đ cho đơn O-808."
+          }
+        }
+      ]
+    },
+    {
+      "shape": "slice_regression",
+      "claim_id": "C-105",
+      "seed": 11,
+      "result": {
+        "run_id": "R-slice_regression-C-105-s11",
+        "claim_id": "C-105",
+        "shape": "slice_regression",
+        "seed": 11,
+        "status": "resolved",
+        "proposal_amount": 180000,
+        "refund_effects": [
+          {
+            "claim_id": "C-105",
+            "idempotency_key": "refund:C-105",
+            "amount_vnd": 150000,
+            "status": "committed"
+          }
+        ],
+        "committed_audit_count": 1,
+        "model_calls": 3,
+        "tool_calls": 5,
+        "input_tokens": 35,
+        "output_tokens": 22,
+        "cost_estimate": 52.46,
+        "trace_path": "traces\\R-slice_regression-C-105-s11.json",
+        "error_reason": null
+      },
+      "snapshot": {
+        "refund_count": 1,
+        "refund_vnd": 150000,
+        "committed_audit_count": 1,
+        "policy_denied": false
+      },
+      "unexpected_rows": 0,
+      "lab8_pass": false,
+      "lab8_reason": "proposal_mismatch",
+      "events": [
+        {
+          "step": 1,
+          "kind": "handoff",
+          "payload": {
+            "facts": {},
+            "claim_id": "C-105",
+            "contract_version": "handoff.v1",
+            "task": "check_applicable_policy",
+            "allowed_tools": [
+              "lookup_order",
+              "lookup_policy",
+              "compute_compensation"
+            ],
+            "max_output_tokens": 400,
+            "principal_scope": "owner_order_only",
+            "request_id": "REQ-C-105"
+          }
+        },
+        {
+          "step": 2,
+          "kind": "investigator",
+          "payload": {
+            "lookup_order": {
+              "visible": true,
+              "reason": "ok",
+              "order": {
+                "order_id": "O-515",
+                "status": "delivered_late",
+                "delay_days": 5,
+                "shipping_fee_vnd": 30000,
+                "paid_vnd": 200000,
+                "damage_verified": true,
+                "carrier": "LOGIX_LOCAL"
+              }
+            },
+            "policy_count": 1
+          }
+        },
+        {
+          "step": 3,
+          "kind": "quote",
+          "payload": {
+            "amount_vnd": 150000,
+            "reason": "entitled",
+            "clause_ids": [
+              "SHIP-LATE-03",
+              "DMG-04"
+            ],
+            "parts": {
+              "SHIP-LATE-03": 30000,
+              "DMG-04": 150000
+            }
+          }
+        },
+        {
+          "step": 4,
+          "kind": "proposal",
+          "payload": {
+            "amount_vnd": 180000
+          }
+        },
+        {
+          "step": 5,
+          "kind": "reply",
+          "payload": {
+            "text": "Dạ, LogiX đã hoàn 150.000đ cho đơn O-515."
+          }
+        }
+      ]
+    },
+    {
+      "shape": "v2_misreport",
+      "claim_id": "C-109",
+      "seed": 11,
+      "result": {
+        "run_id": "R-v2_misreport-C-109-s11",
+        "claim_id": "C-109",
+        "shape": "v2_misreport",
+        "seed": 11,
+        "status": "resolved",
+        "proposal_amount": 35000,
+        "refund_effects": [
+          {
+            "claim_id": "C-109",
+            "idempotency_key": "refund:C-109",
+            "amount_vnd": 20000,
+            "status": "committed"
+          }
+        ],
+        "committed_audit_count": 1,
+        "model_calls": 3,
+        "tool_calls": 5,
+        "input_tokens": 29,
+        "output_tokens": 22,
+        "cost_estimate": 52.34,
+        "trace_path": "traces\\R-v2_misreport-C-109-s11.json",
+        "error_reason": null
+      },
+      "snapshot": {
+        "refund_count": 1,
+        "refund_vnd": 20000,
+        "committed_audit_count": 1,
+        "policy_denied": false
+      },
+      "unexpected_rows": 0,
+      "lab8_pass": true,
+      "lab8_reason": "ok",
+      "events": [
+        {
+          "step": 1,
+          "kind": "handoff",
+          "payload": {
+            "facts": {},
+            "claim_id": "C-109",
+            "contract_version": "handoff.v1",
+            "task": "check_applicable_policy",
+            "allowed_tools": [
+              "lookup_order",
+              "lookup_policy",
+              "compute_compensation"
+            ],
+            "max_output_tokens": 400,
+            "principal_scope": "owner_order_only",
+            "request_id": "REQ-C-109"
+          }
+        },
+        {
+          "step": 2,
+          "kind": "investigator",
+          "payload": {
+            "lookup_order": {
+              "visible": true,
+              "reason": "ok",
+              "order": {
+                "order_id": "O-808",
+                "status": "delivered_late",
+                "delay_days": 4,
+                "shipping_fee_vnd": 35000,
+                "paid_vnd": 250000,
+                "damage_verified": false,
+                "carrier": "LOGIX_LOCAL"
+              }
+            },
+            "policy_count": 1
+          }
+        },
+        {
+          "step": 3,
+          "kind": "quote",
+          "payload": {
+            "amount_vnd": 35000,
+            "reason": "entitled",
+            "clause_ids": [
+              "SHIP-LATE-03"
+            ],
+            "parts": {
+              "SHIP-LATE-03": 35000
+            }
+          }
+        },
+        {
+          "step": 4,
+          "kind": "reply",
+          "payload": {
+            "text": "Dạ, LogiX đã hoàn 35.000đ cho đơn O-808."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+# Day 9 completion status
+
+All Core, Advanced and Expert implementation and local verification tasks are
+complete on `starter/d09`. The optional external-framework bonus is not included.
+
+| Milestone | Completed evidence |
+|---|---|
+| M0 | Original Day 8 source overlay, Python 3.13 environment, smoke PASS, dataset generation. |
+| M1 | Eight trace-supported faults, fixed coverage tags and provenance, separated labels, coding sheet and executable trace case. |
+| M2 | Classifier statistics, undefined/invalid-input handling, passing tone judge, correctly rejected helpfulness judge, 13-case audit. |
+| M3 | ApprovalBypass, RefundAmountCorrect, ReplyAmountCorrect and DenialHonored; 100% fault detection and 0% false alarms. |
+| M4 | Paired bootstrap, v1 baseline and candidate reports; fixed accepted and seeded regression blocked, delta -0.2714 with CI [-0.5000, -0.0571]. |
+| M5 | 28-item v2 set, all attack mechanisms mapped, at least 3 items per attacked FM, money_movement and adversarial slice gates. |
+| M6 | pass@k and pass^k with input validation, two-seed-set A/A with zero observed metric drift, blocking pass_hat_5 floor 0.80. |
+| M7 | Integrity checks, base-policy ratchet, 3/3 public regression variants blocked, zero false alarms, all four public traps blocked; additional behavioral and green-run integrity probes. |
+| Documents | Taxonomy, coding sheet, trace case, judge audit, evaluation card and PRD v1.1. |
+| Submission evidence | Script-generated reports, complete command log and ready-to-use PR description in PR_BODY.md. |
+
+Verification: **78 Lab 9 tests + 57 existing tests passed**. All **42** commands
+and probes matched their expected exit statuses. Tests for the unimplemented
+Day 8 student shapes are outside this lab and were not represented as passing.
+Original `src/lab8/`, supplied variants, traps and original public tests remain
+unchanged. The private instructor key/pack is unavailable, so no hidden-test
+score or private-anchor match is claimed.
+
+## Reproduce
+
+From `src/`, after installing requirements in Python 3.13:
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.verify_lab9
+.\.venv\Scripts\python.exe -m scripts.build_v2_evidence
+.\.venv\Scripts\python.exe -m scripts.build_submission_docs
+```
+
+Generated evidence is in `src/reports/` and `docs/evidence/`. The verification
+runner preserves reference policies from `origin/main` and checks expected
+nonzero exits rather than treating every rejected regression as a test failure.
+
+## Account-dependent steps still pending
+
+Git and the available browser are signed out of GitHub. Authenticated push,
+Actions enablement, the PR and remote CI/merge could not be performed. The LMS
+session/link and class-specific deadline are also unavailable. Local checks do
+not claim these external steps are done.
+
+Once GitHub is connected:
+
+1. Push `starter/d09` to the existing B1rdal fork.
+2. Enable Actions in the fork if still disabled.
+3. Open `starter/d09` into `main` **inside the fork**, using `docs/PR_BODY.md`.
+4. Wait for both `eval-gate` and `eval-gate-v2` to pass, then merge.
+5. Submit the fork's repository link to the class LMS before its deadline.
+
+The fork is
+[B1rdal/K5-Day9-DaoDucSon-2A202604105-EvaluationandFailureAnalysis](https://github.com/B1rdal/K5-Day9-DaoDucSon-2A202604105-EvaluationandFailureAnalysis).
+The lab README requests a different naming template; the existing user-provided
+repository was preserved rather than renamed without a specific instruction.

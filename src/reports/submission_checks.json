@@ -1,0 +1,216 @@
+{
+  "implementation_commit": "f67d35e5e062c705c9813011723c9095b95c63a9",
+  "commands": [
+    {
+      "command": "python -m lab9.smoke",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m pytest -q -m student -o addopts= -k lab9",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m pytest -q",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.evalset --build --check",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.evalset --v2 --build",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.judge --csv data/eval/judge_tone_public.csv --audit 10",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.judge --csv data/eval/judge_helpful_public.csv --audit 8",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "python -m lab9.mutation --detect",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.eval --shape swarm --spec config/metric_spec.yaml --out reports/baseline_v1.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/baseline_v1.json --baseline reports/baseline_v1.json --spec config/metric_spec.yaml --base-spec reports/base_policy_v1.yaml",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.eval --shape fixed --spec config/metric_spec.yaml --out reports/eval_fixed.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/eval_fixed.json --baseline reports/baseline_v1.json --spec config/metric_spec.yaml --base-spec reports/base_policy_v1.yaml",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.eval --shape seeded_regression --spec config/metric_spec.yaml --out reports/eval_seeded_regression.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/eval_seeded_regression.json --baseline reports/baseline_v1.json --spec config/metric_spec.yaml --base-spec reports/base_policy_v1.yaml",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "python -m lab9.eval --shape swarm --spec config/metric_spec_v2.yaml --out reports/baseline_v2.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/baseline_v2.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml --base-spec reports/base_policy_v2.yaml",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.eval --shape fixed --spec config/metric_spec_v2.yaml --out reports/eval_fixed_v2.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/eval_fixed_v2.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml --base-spec reports/base_policy_v2.yaml",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.eval --shape seeded_regression --spec config/metric_spec_v2.yaml --out reports/eval_seeded_regression_v2.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/eval_seeded_regression_v2.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml --base-spec reports/base_policy_v2.yaml",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "python -m lab9.eval --shape honest_refactor --spec config/metric_spec_v2.yaml --out reports/eval_honest_refactor_v2.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/eval_honest_refactor_v2.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml --base-spec reports/base_policy_v2.yaml",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.eval --shape slice_regression --spec config/metric_spec_v2.yaml --out reports/eval_slice_regression.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/eval_slice_regression.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml --base-spec reports/base_policy_v2.yaml",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "python -m lab9.eval --shape flaky_regression --spec config/metric_spec_v2.yaml --out reports/eval_flaky_regression_v2.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/eval_flaky_regression_v2.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml --base-spec reports/base_policy_v2.yaml",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "python -m lab9.eval --shape swarm --out reports/eval_pr.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.ci_check --pr reports/eval_pr.json --baseline reports/baseline_v1.json",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.mutation --spec config/metric_spec_v2.yaml --baseline reports/baseline_v2.json --base-spec reports/base_policy_v2.yaml",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.mutation --spec config/metric_spec_v2.yaml --aa 66,77,88,99,110",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.traps --pr reports/eval_slice_regression.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/traps/evaluator_errors_as_nan.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml --base-spec config/metric_spec_v2.yaml",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/traps/dropped_failing_rows.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml --base-spec config/metric_spec_v2.yaml",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/traps/cherry_picked_seeds.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml --base-spec config/metric_spec_v2.yaml",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/traps/loosened_spec.json --baseline reports/baseline_v2.json --spec reports/traps/loosened_spec.spec.yaml --base-spec config/metric_spec_v2.yaml",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "lab9.eval quiet_fact_error (runtime-only probe)",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/eval_quiet_fact_error_v2.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "lab9.eval reply_mismatch_probe (runtime-only probe)",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "python -m lab9.gate --pr reports/eval_reply_mismatch_probe_v2.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "integrity probe: duplicate_row",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "integrity probe: green_evaluator_error",
+      "exit_code": 1,
+      "expected_exit": 1
+    },
+    {
+      "command": "integrity probe: slice_relabel",
+      "exit_code": 1,
+      "expected_exit": 1
+    }
+  ],
+  "passed": true
+}
